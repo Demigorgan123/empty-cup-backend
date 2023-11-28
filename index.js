@@ -8,6 +8,7 @@ const app = express()
 app.use(cors({
     origin:"*"
 }))
+console.log(process.env)
 app.get('/', async (req, resp)=>{
     const connect = await client.connect()
     const db = connect.db('MyDB')
