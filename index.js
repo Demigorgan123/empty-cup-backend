@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const {MongoClient} = require('mongodb')
 const cors = require('cors')
-const db_url = `mongodb+srv://Dhanishkumar:${process.env.PASS_WD}@cluster0.snxi3hb.mongodb.net/?retryWrites=true&w=majority`
+const db_url = process.env.DB_URL
 const client = new MongoClient(db_url)
 const app = express()
 app.use(cors({
